@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:wght@300&display=swap');
+
+:root {
+  --font-family: 'Raleway', sans-serif;
+  --second-family: 'Playfair Display', sans-serif;
+  --third-family: 'Roboto', sans-serif;
+  --font3: 'Post No Bills Jaffna SemiBold', sans-serif;
+  --accent: #d4c17f;
+  --dark: #242b33;
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--dark);
+}
+
+header {
+  background-image: url(/img/background_main.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  max-height: 840px;
+  height: 100vh;
+  padding: 30px 0 74px;
+  gap: 30px;
+
+  nav {
+    max-width: 1110px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .block {
+      display: flex;
+      gap: 38px;
+
+      @media screen and (max-width: 740px) {
+        display: none;
+      }
+
+      a {
+        font-size: 14px;
+        letter-spacing: 0.05em;
+        color: var(--white);
+        text-decoration: none;
+        transition: 0.5s;
+
+        &:hover {
+          color: var(--accent);
+        }
+      }
+    }
+
+    .burger_menu {
+      display: none;
+
+      @media screen and (max-width: 740px) {
+        display: block;
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 470px;
+    height: 100vh;
+    max-width: 582px;
+    width: 100%;
+    gap: 30px;
+
+    .title {
+      font-family: var(--second-family);
+      font-size: 48px;
+      text-align: center;
+      color: var(--accent);
+
+      @media screen and (max-width: 540px) {
+        font-size: 27px;
+      }
+    }
+
+    .imgMouse {
+      width: 40px;
+      height: 40px;
+    }
+
+    .box {
+      display: flex;
+      gap: 98px;
+
+      @media screen and (max-width: 540px) {
+        gap: 15px;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .folder {
+        display: flex;
+        gap: 14px;
+
+        .text {
+          font-size: 18px;
+          color: var(--white);
+        }
+      }
+    }
+  }
+}
+
+main {
+  .testimonials {
+    display: flex;
+    max-width: 794px;
+    width: 100%;
+    margin: 120px auto;
+    gap: 70px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 53px;
+
+      img {
+        width: 80px;
+        height: 80px;
+      }
+
+      p {
+        font-family: var(--third-family);
+        font-size: 20px;
+        line-height: 135%;
+        text-align: center;
+        color: var(--white);
+      }
+
+      &.block_1 {
+        width: 193px;
+      }
+
+      &.block_2 {
+        width: 133px;
+      }
+
+      &.block_3 {
+        width: 134px;
+      }
+
+      &.block_4 {
+        width: 124px;
+        gap: 47px;
+      }
+    }
+  }
+
+  .appartments {
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+
+    .subtitle {
+      font-family: var(--second-family);
+      font-size: 36px;
+      color: var(--accent);
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+
+      .block {
+        max-width: 535px;
+        width: 100%;
+        height: 320px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: flex-end;
+
+        p {
+          margin: 0 0 50px 50px;
+          font-size: 24px;
+          color: var(--white);
+        }
+
+        &.block_1 {
+          background-image: url(/img/apartImg1.png);
+        }
+
+        &.block_2 {
+          background-image: url(/img/apartImg2.png);
+        }
+      }
+    }
+  }
+
+  .cta {
+    background-image: url(/img/cta_bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .container {
+      margin: 0 auto;
+      padding: 180px 0;
+      max-width: 1110px;
+      width: 100%;
+      display: flex;
+      gap: 35px;
+
+      @media screen and (max-width: 1110px) {
+        justify-content: center;
+      }
+
+      @media screen and (max-width: 660px) {
+        flex-wrap: wrap;
+      }
+
+      .block_1 {
+        max-width: 535px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        @media screen and (max-width: 660px) {
+          text-align: center;
+        }
+
+        h2 {
+          font-family: var(--second-family);
+          font-size: 36px;
+          color: var(--accent);
+        }
+
+        p {
+          line-height: 150%;
+          color: var(--white);
+        }
+      }
+
+      .block_2 {
+        max-width: 540px;
+        width: 100%;
+        height: 135px;
+        align-self: flex-end;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        gap: 30px;
+
+        @media screen and (max-width: 1110px) {
+          height: auto;
+          max-width: 255px;
+        }
+
+        input {
+          border: none;
+          outline: none;
+          background: rgba(255, 255, 255, 0.2);
+          font-family: var(--font-family);
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 193%;
+          color: #bebebe;
+          padding: 11px 0;
+          text-align: center;
+          width: 255px;
+
+          &::placeholder {
+            color: #bebebe;
+          }
+        }
+
+        p {
+          font-size: 13px;
+          line-height: 123%;
+          text-align: center;
+          color: #e7e7e7;
+          width: 255px;
+          align-self: center;
+        }
+
+        button {
+          background: var(--accent);
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 169%;
+          text-align: center;
+          color: var(--white);
+          padding: 11px 0;
+          width: 255px;
+          border: none;
+          transition: 0.5s;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+
+  .video {
+    margin: 0 auto;
+    max-width: 719px;
+    width: 100%;
+
+    iframe {
+      width: 100%;
+      height: 650px;
+    }
+  }
+}
